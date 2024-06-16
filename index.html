@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>BPM Calculator!</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body class="prevent-select">
+    <header></header>
+    <div class="start">
+        <p>
+            To start, press a key, tap, or click the screen.
+        </p>
+    </div>
+    <div class="score">
+        <span id="bpm-count">0</span>
+        <span id="context-string">beats per minute</span>
+        <table id="data">
+            <tbody>
+                <tr id="avg-row" style="opacity:0">
+                    <th scope="row">Average BPM:</th>
+                    <td id="bpm-avg"></td>
+                </tr>
+                <tr id="acc-row" style="opacity:0">
+                    <th scope="row">Accuracy:</th>
+                    <td><span id="bpm-acc"></span>&percnt;</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br />
+        <div id="settings">
+            <div class="setting">
+                <label for="set-target">Set target BPM</label>
+                <input type="checkbox" id="set-target" />
+            </div>
+            <br />
+            <div class="setting">
+                <input type="number" id="target-bpm" min="1" max="999" placeholder="Target BPM" style="opacity:0"
+                    disabled />
+            </div>
+            <br />
+            <div class="setting">
+                <button id="reset">Reset</button>
+            </div>
+        </div>
+
+    </div>
+    <script src="app.js"></script>
+    <footer></footer>
+</body>
+
+
+</html>
